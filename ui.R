@@ -1,6 +1,6 @@
 #ui.R - Plot Histogram, with Slide Input
 shinyUI(pageWithSidebar(
-        headerPanel("Exploratory Analysis:  Stock ~ Market"),
+        headerPanel("Stock Explorer"),
         sidebarPanel(
                 selectInput("ticker", "1) Stock Ticker:",
                         c("Alcoa (AA)" = "AA",
@@ -30,7 +30,10 @@ shinyUI(pageWithSidebar(
                          HTML("<li> The model in the form <b><i>stock = b0 + b1 * market</i></b>."),
                          HTML("<li> The R-squared calculation, indicating the amount of variance explained by this model."),
                          HTML("<li> The plot of stock return and the model over the end date and duration selected."),
-                         HTML("<li> The plot of residuals over the end date and duration selected.")
+                         HTML("<li> The plot of residuals over the end date and duration selected."),
+                         
+                         p(""),
+                         HTML("Code for this project can be found at:  <a>https://github.com/cpeachLBNL/DDP_CourseProject</a>")
                          
                         )
                     )
